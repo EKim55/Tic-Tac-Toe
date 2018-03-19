@@ -23,9 +23,9 @@
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="x0e-K6-dT6"/>
-                                    <barButtonItem title="New Game" id="1y0-lE-x8p">
+                                    <barButtonItem title="New Game" id="Ujd-rl-BeT">
                                         <connections>
-                                            <action selector="pressedNewGame:" destination="BYZ-38-t0r" id="q6g-cy-bcs"/>
+                                            <action selector="pressedNewGame:" destination="BYZ-38-t0r" id="Yzx-C1-64k"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -33,19 +33,105 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35g-Z2-8dT" userLabel="Usable Area">
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQZ-jv-49m">
+                                        <rect key="frame" x="20" y="91" width="374" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pwc-T0-Jaq" userLabel="Board">
                                         <rect key="frame" x="20" y="151" width="374" height="414"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6O-mc-ynu">
-                                                <rect key="frame" x="50" y="50" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Inn-JG-hfH">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="414"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dbZ-CL-vXs">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="414"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JfB-jy-P4k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="138"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6O-mc-ynu">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6P5-Kh-IU3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yja-fk-R6j">
+                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsf-lD-CkX"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L82-B5-9k9">
+                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Asn-mP-lnF"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bKF-JU-rhx">
+                                                        <rect key="frame" x="0.0" y="138" width="374" height="138"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMU-s4-8Ro">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g0O-9A-FlU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJ1-bc-5Uq">
+                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o84-Uf-Jfm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfW-3L-XV6">
+                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LMS-D0-aUc"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gqW-BE-WMZ">
+                                                        <rect key="frame" x="0.0" y="276" width="374" height="138"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwo-LK-NDD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwP-x9-WOi"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TQ-m9-Rie">
+                                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ox-ra-INj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei9-Xx-0d1">
+                                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="138"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Rc-gL-sLA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="dbZ-CL-vXs" firstAttribute="leading" secondItem="Pwc-T0-Jaq" secondAttribute="leading" id="3jW-hz-GgU"/>
                                             <constraint firstAttribute="width" secondItem="Pwc-T0-Jaq" secondAttribute="height" multiplier="28:31" id="DxE-IO-iyx"/>
+                                            <constraint firstItem="Inn-JG-hfH" firstAttribute="leading" secondItem="Pwc-T0-Jaq" secondAttribute="leading" id="HfR-5X-Fjc"/>
+                                            <constraint firstItem="Inn-JG-hfH" firstAttribute="top" secondItem="Pwc-T0-Jaq" secondAttribute="top" id="LFq-Bw-ar8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Inn-JG-hfH" secondAttribute="trailing" id="XbZ-dK-oL2"/>
+                                            <constraint firstAttribute="trailing" secondItem="dbZ-CL-vXs" secondAttribute="trailing" id="Yh3-rG-die"/>
                                             <constraint firstAttribute="width" secondItem="Pwc-T0-Jaq" secondAttribute="height" multiplier="35:16" id="ZPk-Ar-Nz1"/>
                                             <constraint firstAttribute="height" constant="670" id="fw4-1E-y6L"/>
+                                            <constraint firstAttribute="bottom" secondItem="dbZ-CL-vXs" secondAttribute="bottom" id="mam-5b-nVk"/>
+                                            <constraint firstItem="dbZ-CL-vXs" firstAttribute="top" secondItem="Pwc-T0-Jaq" secondAttribute="top" id="pB2-2A-dye"/>
+                                            <constraint firstAttribute="bottom" secondItem="Inn-JG-hfH" secondAttribute="bottom" id="wEc-EB-XuV"/>
                                             <constraint firstAttribute="width" constant="670" id="z0O-W9-qn8"/>
                                         </constraints>
                                         <variation key="default">
@@ -69,14 +155,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQZ-jv-49m">
-                                        <rect key="frame" x="20" y="91" width="374" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="OQZ-jv-49m" firstAttribute="leading" secondItem="35g-Z2-8dT" secondAttribute="leading" constant="20" id="1LE-Nf-AZr"/>
                                     <constraint firstItem="Pwc-T0-Jaq" firstAttribute="leading" secondItem="35g-Z2-8dT" secondAttribute="leading" constant="20" id="KRW-qM-XXz"/>
@@ -144,7 +223,9 @@
                             <constraint firstAttribute="trailing" secondItem="35g-Z2-8dT" secondAttribute="trailing" id="Hdf-d4-JBc"/>
                             <constraint firstItem="35g-Z2-8dT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IDr-bk-iWd"/>
                             <constraint firstItem="tt4-oC-sLJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O7j-K5-Ucu"/>
-                            <constraint firstItem="tt4-oC-sLJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XPJ-3e-xOv"/>
+                            <constraint firstItem="tt4-oC-sLJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XPJ-3e-xOv">
+                                <variation key="widthClass=regular" constant="-20"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="35g-Z2-8dT" secondAttribute="trailing" id="dZb-Xr-Gap"/>
                             <constraint firstItem="35g-Z2-8dT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gsU-1j-iAI"/>
                             <constraint firstItem="35g-Z2-8dT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hQq-Me-a0E"/>
@@ -198,9 +279,24 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameBoardImageView" destination="Inn-JG-hfH" id="hTh-kY-cKJ"/>
+                        <outlet property="gameStateLabel" destination="OQZ-jv-49m" id="Sbh-If-gdV"/>
+                        <outlet property="gameStateNavBar" destination="tt4-oC-sLJ" id="FQM-09-Nel"/>
+                        <outletCollection property="gameBoardButtons" destination="M6O-mc-ynu" collectionClass="NSMutableArray" id="3yA-65-XVv"/>
+                        <outletCollection property="gameBoardButtons" destination="yja-fk-R6j" collectionClass="NSMutableArray" id="GSV-06-3YP"/>
+                        <outletCollection property="gameBoardButtons" destination="L82-B5-9k9" collectionClass="NSMutableArray" id="ssC-Md-qhH"/>
+                        <outletCollection property="gameBoardButtons" destination="bMU-s4-8Ro" collectionClass="NSMutableArray" id="KQH-3y-jz6"/>
+                        <outletCollection property="gameBoardButtons" destination="PJ1-bc-5Uq" collectionClass="NSMutableArray" id="301-fN-qeW"/>
+                        <outletCollection property="gameBoardButtons" destination="VfW-3L-XV6" collectionClass="NSMutableArray" id="nWJ-sJ-2Hg"/>
+                        <outletCollection property="gameBoardButtons" destination="xwo-LK-NDD" collectionClass="NSMutableArray" id="zhq-sM-yc9"/>
+                        <outletCollection property="gameBoardButtons" destination="8TQ-m9-Rie" collectionClass="NSMutableArray" id="DKs-RC-rwK"/>
+                        <outletCollection property="gameBoardButtons" destination="Ei9-Xx-0d1" collectionClass="NSMutableArray" id="wpa-ZW-wpE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.25" y="33.984375"/>
         </scene>
     </scenes>
 </document>

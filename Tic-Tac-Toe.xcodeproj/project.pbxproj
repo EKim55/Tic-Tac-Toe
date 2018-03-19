@@ -15,6 +15,7 @@
 		0AC882F4206009BF00573BED /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC882F1206009BE00573BED /* Icon-72.png */; };
 		0AC882F5206009BF00573BED /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC882F2206009BF00573BED /* Icon@2x.png */; };
 		0AC882F6206009BF00573BED /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AC882F3206009BF00573BED /* Icon.png */; };
+		0AC882F82060153500573BED /* TicTacToeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC882F72060153500573BED /* TicTacToeGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0AC882F1206009BE00573BED /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		0AC882F2206009BF00573BED /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		0AC882F3206009BF00573BED /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0AC882F72060153500573BED /* TicTacToeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				0A0BC042205AD13B00A1ABDD /* Assets.xcassets */,
 				0A0BC044205AD13B00A1ABDD /* LaunchScreen.storyboard */,
 				0A0BC047205AD13B00A1ABDD /* Info.plist */,
+				0AC882F72060153500573BED /* TicTacToeGame.swift */,
 			);
 			path = "Tic-Tac-Toe";
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC882F82060153500573BED /* TicTacToeGame.swift in Sources */,
 				0A0BC03E205AD13B00A1ABDD /* ViewController.swift in Sources */,
 				0A0BC03C205AD13B00A1ABDD /* AppDelegate.swift in Sources */,
 			);
@@ -300,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rosehulman.kime2.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -314,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rosehulman.kime2.Tic-Tac-Toe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
